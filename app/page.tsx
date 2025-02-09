@@ -1,3 +1,9 @@
+import { HeroPhoto } from "@/components/HeroPhoto/HeroPhoto";
+
 export default function Home() {
-  return <section></section>;
+  return (
+    <section>
+      <HeroPhoto />
+    </section>
+  );
 }
