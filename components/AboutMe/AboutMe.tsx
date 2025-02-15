@@ -30,18 +30,25 @@ export const AboutMeSection = () => {
               My Journey
             </h3>
             <p className="text-sm md:text-base mb-4">
-              I&apos;m Alex Appleget, a passionate Frontend Software Engineer
-              with a knack for creating beautiful and functional web
-              experiences. My journey in the world of web development started
-              [X] years ago, and since then, I&apos;ve been on an exciting ride
-              of continuous learning and growth.
+              I&apos;m Alex Appleget, a self-taught Frontend Software Engineer
+              with a strong focus on building functional, user-centered web
+              applications. My journey into web development began just over a
+              year ago, and since then, I&apos;ve embraced a constant path of
+              growth and learning.
+            </p>
+            <p className="text-sm md:text-base mb-4">
+              What excites me most is the ability to turn ideas into reality
+              through code. I thrive on solving complex problems and find
+              satisfaction in seeing users engage with the interfaces I build. A
+              pivotal moment in my career came when my team and I won a
+              hackathon, which led to my apprenticeship leader deciding to
+              completely pivot and focus on our app. He saw its potential to
+              generate revenue, and as a result, I&apos;m now considered a
+              co-founder.
             </p>
             <p className="text-sm md:text-base">
-              What drives me is the ability to transform ideas into reality
-              through code. I love the challenge of solving complex problems and
-              the satisfaction of seeing users interact seamlessly with the
-              interfaces I create. When I&apos;m not coding, you can find me
-              [Your Hobbies or Interests].
+              When I&apos;m not coding, you can find me traveling with my wife
+              or immersing myself in video games.
             </p>
           </CardContent>
         </Card>
