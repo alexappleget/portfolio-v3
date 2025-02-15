@@ -3,8 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import React from "react";
 
-export const HeroSection = () => {
+export const HeroSection = ({
+  projectRef,
+}: {
+  projectRef: React.RefObject<HTMLDivElement | null>;
+}) => {
+  const handleScrollToProjects = () => {
+    if (projectRef.current) {
+      projectRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <section className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-start px-6 py-6 md:px-20 md:py-20">
       <div className="flex flex-col justify-center gap-6 md:gap-4 text-white w-full md:w-1/2 text-center md:text-left md:mt-0">
@@ -30,14 +40,14 @@ export const HeroSection = () => {
           >
             Download CV
           </Link>
-          <Link
-            href=""
+          <button
+            onClick={handleScrollToProjects}
             className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] font-bold w-40 h-12 rounded-full mt-2 p-[2.5px]"
           >
             <div className="bg-[#20242d] h-full w-full rounded-full flex items-center justify-center">
               See My Work
             </div>
-          </Link>
+          </button>
         </div>
       </div>
       <div className="hidden w-full md:w-1/2 md:flex justify-center md:justify-end my-8 md:my-0">

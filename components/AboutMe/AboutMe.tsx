@@ -21,7 +21,7 @@ const aboutMeItems = [
 
 export const AboutMeSection = () => {
   return (
-    <section className="flex flex-col gap-10 w-full px-6 py-6 md:px-20 md:py-20">
+    <section className="flex flex-col gap-10 w-full px-6 my-20 md:px-20 md:py-20">
       <h2 className="text-white text-3xl font-bold">About Me</h2>
       <NeonGradientCard borderSize={6}>
         <Card className="rounded-xl bg-[#20242d] p-6 md:p-8">

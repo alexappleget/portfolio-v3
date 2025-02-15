@@ -11,6 +11,7 @@ import {
 } from "../Card/card";
 import Image from "next/image";
 import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import React from "react";
 
 const projects = [
   {
@@ -39,55 +40,63 @@ const projects = [
   },
 ];
 
-export const ProjectSection = () => {
-  return (
-    <section className="flex flex-col gap-10 w-full px-6 py-6 md:px-20 md:py-20">
-      <h2 className="text-white text-3xl font-bold">Projects</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-white">
-        {projects.map((project) => (
-          <NeonGradientCard key={project.title} borderSize={6}>
-            <Card className="flex flex-col gap-2 md:gap-4 rounded-xl bg-[#20242d]">
-              <CardHeader className="relative h-60">
-                <Image
-                  alt={project.imgAlt}
-                  src={project.img}
-                  fill
-                  className="object-cover pt-4 pl-4 pr-4 md:pt-6 md:pl-6 md:pr-6"
-                />
-              </CardHeader>
-              <CardContent className="flex flex-col flex-grow">
-                <CardTitle className="text-xl md:text-2xl">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="text-xs md:text-sm mt-4 h-28 md:h-32">
-                  {project.description}
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                {project.href ? (
-                  <Link
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-[#20242d] hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full"
-                  >
-                    Live View
-                  </Link>
-                ) : (
-                  <Link
-                    href=""
-                    className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full cursor-not-allowed p-[2.5px]"
-                  >
-                    <div className="bg-[#20242d] h-full w-full rounded-full flex items-center justify-center">
+export const ProjectSection = React.forwardRef<HTMLDivElement | null>(
+  (_, ref) => {
+    return (
+      <section
+        ref={ref}
+        id="project-section"
+        className="flex flex-col gap-10 w-full px-6 py-6 md:px-20 md:py-20"
+      >
+        <h2 className="text-white text-3xl font-bold">Projects</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-white">
+          {projects.map((project) => (
+            <NeonGradientCard key={project.title} borderSize={6}>
+              <Card className="flex flex-col gap-2 md:gap-4 rounded-xl bg-[#20242d]">
+                <CardHeader className="relative h-60">
+                  <Image
+                    alt={project.imgAlt}
+                    src={project.img}
+                    fill
+                    className="object-cover pt-4 pl-4 pr-4 md:pt-6 md:pl-6 md:pr-6"
+                  />
+                </CardHeader>
+                <CardContent className="flex flex-col flex-grow">
+                  <CardTitle className="text-xl md:text-2xl">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-xs md:text-sm mt-4 h-28 md:h-32">
+                    {project.description}
+                  </CardDescription>
+                </CardContent>
+                <CardFooter>
+                  {project.href ? (
+                    <Link
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-[#20242d] hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full"
+                    >
                       Live View
-                    </div>
-                  </Link>
-                )}
-              </CardFooter>
-            </Card>
-          </NeonGradientCard>
-        ))}
-      </div>
-    </section>
-  );
-};
+                    </Link>
+                  ) : (
+                    <Link
+                      href=""
+                      className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full cursor-not-allowed p-[2.5px]"
+                    >
+                      <div className="bg-[#20242d] h-full w-full rounded-full flex items-center justify-center">
+                        Live View
+                      </div>
+                    </Link>
+                  )}
+                </CardFooter>
+              </Card>
+            </NeonGradientCard>
+          ))}
+        </div>
+      </section>
+    );
+  }
+);
+
+ProjectSection.displayName = "ProjectSection";
