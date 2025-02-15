@@ -1,0 +1,70 @@
+"use client";
+
+import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import { Card, CardContent } from "../Card/card";
+import { Code, Plane } from "lucide-react";
+
+const aboutMeItems = [
+  {
+    icon: <Code className="size-6 md:size-8" />,
+    title: "Skills",
+    description:
+      "Proficient in React, Next.js, TypeScript, and Tailwind CSS, with a strong focus on building responsive, accessible web applications. Experienced in integrating and working with large language models to enhance functionality and user experience.",
+  },
+  {
+    icon: <Plane className="size-6 md:size-8" />,
+    title: "Passion",
+    description:
+      "Obsessed with traveling and exploring new places. Huge Harry Potter fan—still waiting for my Hogwarts letter! Love experiencing new cultures and a bit of magic, both real and fictional.",
+  },
+];
+
+export const AboutMeSection = () => {
+  return (
+    <section className="flex flex-col gap-10 w-full px-6 py-6 md:px-20 md:py-20">
+      <h2 className="text-white text-3xl font-bold">About Me</h2>
+      <NeonGradientCard borderSize={6}>
+        <Card className="rounded-xl bg-[#20242d] p-6 md:p-8">
+          <CardContent className="text-white">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+              My Journey
+            </h3>
+            <p className="text-sm md:text-base mb-4">
+              I&apos;m Alex Appleget, a passionate Frontend Software Engineer
+              with a knack for creating beautiful and functional web
+              experiences. My journey in the world of web development started
+              [X] years ago, and since then, I&apos;ve been on an exciting ride
+              of continuous learning and growth.
+            </p>
+            <p className="text-sm md:text-base">
+              What drives me is the ability to transform ideas into reality
+              through code. I love the challenge of solving complex problems and
+              the satisfaction of seeing users interact seamlessly with the
+              interfaces I create. When I&apos;m not coding, you can find me
+              [Your Hobbies or Interests].
+            </p>
+          </CardContent>
+        </Card>
+      </NeonGradientCard>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {aboutMeItems.map((item, index) => (
+          <NeonGradientCard key={index} borderSize={6}>
+            <Card className="flex flex-col h-full rounded-xl bg-[#20242d]">
+              <CardContent className="flex flex-col items-center text-center p-6 h-full">
+                <div className="mb-4 p-3 bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] rounded-full">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-white">
+                  {item.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-300">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
+          </NeonGradientCard>
+        ))}
+      </div>
+    </section>
+  );
+};

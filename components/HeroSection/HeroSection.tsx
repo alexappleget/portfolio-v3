@@ -1,8 +1,8 @@
 "use client";
 
-import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
 
 export const HeroSection = () => {
   return (
@@ -12,7 +12,9 @@ export const HeroSection = () => {
         <h1 className="text-5xl md:text-7xl font-bold">Alex Appleget</h1>
         <h2 className="text-3xl md:text-4xl font-semibold">
           And I&apos;m a{" "}
-          <span className="text-[#00f0ff]">Frontend Software Engineer</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00F0FF] to-[#FF00AA]">
+            Frontend Software Engineer
+          </span>
         </h2>
         <p className="md:text-lg">
           Lorem ipsum is a dummy or placeholder text commonly used in graphic
@@ -24,43 +26,41 @@ export const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             download
-            className="flex items-center justify-center bg-[#00f0ff] hover:bg-[#00aebb] text-[#20242d] font-semibold w-40 h-12 rounded-full mt-2 mx-auto md:mx-0"
+            className="flex items-center justify-center bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-[#20242d] hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] font-bold w-40 h-12 rounded-full mt-2"
           >
             Download CV
           </Link>
           <Link
             href=""
-            className="flex items-center justify-center bg-[#20242d] hover:bg-[rgba(0,240,255,0.2)] text-[#00f0ff] border-2 border-[#00f0ff] font-semibold w-40 h-12 rounded-full mt-2"
+            className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] font-bold w-40 h-12 rounded-full mt-2 p-[2.5px]"
           >
-            See My Work
+            <div className="bg-[#20242d] h-full w-full rounded-full flex items-center justify-center">
+              See My Work
+            </div>
           </Link>
         </div>
       </div>
       <div className="hidden w-full md:w-1/2 md:flex justify-center md:justify-end my-8 md:my-0">
-        <div className="relative size-[250px] md:size-[375px] rounded-full overflow-hidden shadow-[0_0_20px_5px_rgba(0,240,255,0.8)]">
-          <Image
-            alt="Headshot of Alex"
-            src="/headshot.jpg"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
-      <div className="hidden absolute bottom-6 left-20 md:flex gap-4 sm:hidden">
-        <Link
-          href="https://github.com/alexappleget"
-          target="_blank"
-          rel="noopener noreferrer"
+        <NeonGradientCard
+          className="size-[250px] md:size-[375px] rounded-full flex items-center justify-center"
+          borderSize={6}
+          borderRadius={9999}
+          neonColors={{
+            firstColor: "#00F0FF",
+            secondColor: "#FF00AA",
+            thirdColor: "#8000FF",
+            fourthColor: "#0000FF",
+          }}
         >
-          <Github className="size-6 text-[#00f0ff] hover:text-white" />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/alex-appleget/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Linkedin className="size-6 text-[#00f0ff] hover:text-white" />
-        </Link>
+          <div className="relative size-[250px] md:size-[375px] rounded-full overflow-hidden">
+            <Image
+              alt="Headshot of Alex"
+              src="/headshot.jpg"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </NeonGradientCard>
       </div>
     </section>
   );
