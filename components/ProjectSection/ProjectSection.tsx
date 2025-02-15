@@ -80,14 +80,11 @@ export const ProjectSection = React.forwardRef<HTMLDivElement | null>(
                       Live View
                     </Link>
                   ) : (
-                    <Link
-                      href=""
-                      className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full cursor-not-allowed p-[2.5px]"
-                    >
+                    <button className="bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] text-white font-bold w-52 mx-auto md:mx-0 md:w-32 h-10 rounded-full cursor-not-allowed p-[2.5px]">
                       <div className="bg-[#20242d] h-full w-full rounded-full flex items-center justify-center">
                         Live View
                       </div>
-                    </Link>
+                    </button>
                   )}
                 </CardFooter>
               </Card>
