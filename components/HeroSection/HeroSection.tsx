@@ -27,8 +27,8 @@ export const HeroSection = ({
           </span>
         </h2>
         <p className="md:text-lg">
-          Lorem ipsum is a dummy or placeholder text commonly used in graphic
-          design, publishing, and web development .
+          I build dynamic and efficient web applications using React, NextJS,
+          TypeScript, and AI Models to create seamless user experiences.
         </p>
         <div className="flex gap-4 mt-10 md:mt-0">
           <Link
