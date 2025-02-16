@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import { NeonGradientCardGlow } from "../NeonGradientCard/neon-gradient-card";
 import React from "react";
 
 export const HeroSection = ({
@@ -51,7 +51,7 @@ export const HeroSection = ({
         </div>
       </div>
       <div className="hidden w-full md:w-1/2 md:flex justify-center md:justify-end my-8 md:my-0">
-        <NeonGradientCard
+        <NeonGradientCardGlow
           className="size-[250px] md:size-[375px] rounded-full flex items-center justify-center"
           borderSize={6}
           borderRadius={9999}
@@ -70,7 +70,7 @@ export const HeroSection = ({
               className="object-cover"
             />
           </div>
-        </NeonGradientCard>
+        </NeonGradientCardGlow>
       </div>
     </section>
   );

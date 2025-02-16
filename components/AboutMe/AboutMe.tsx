@@ -1,6 +1,6 @@
 "use client";
 
-import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import { NeonGradientCardNoGlow } from "../NeonGradientCard/neon-gradient-card";
 import { Card, CardContent } from "../Card/card";
 import { Code, Plane } from "lucide-react";
 
@@ -23,7 +23,7 @@ export const AboutMeSection = () => {
   return (
     <section className="flex flex-col gap-10 w-full px-6 my-20 md:px-20 md:py-20">
       <h2 className="text-white text-3xl font-bold">About Me</h2>
-      <NeonGradientCard borderSize={6}>
+      <NeonGradientCardNoGlow borderSize={6}>
         <Card className="rounded-xl bg-[#20242d] p-6 md:p-8">
           <CardContent className="text-white">
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
@@ -52,10 +52,10 @@ export const AboutMeSection = () => {
             </p>
           </CardContent>
         </Card>
-      </NeonGradientCard>
+      </NeonGradientCardNoGlow>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {aboutMeItems.map((item, index) => (
-          <NeonGradientCard key={index} borderSize={6}>
+          <NeonGradientCardNoGlow key={index} borderSize={6}>
             <Card className="flex flex-col h-full rounded-xl bg-[#20242d]">
               <CardContent className="flex flex-col items-center text-center p-6 h-full">
                 <div className="mb-4 p-3 bg-gradient-to-r from-[#00F0FF] to-[#FF00AA] rounded-full">
@@ -69,7 +69,7 @@ export const AboutMeSection = () => {
                 </p>
               </CardContent>
             </Card>
-          </NeonGradientCard>
+          </NeonGradientCardNoGlow>
         ))}
       </div>
     </section>

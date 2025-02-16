@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "../Card/card";
 import Image from "next/image";
-import { NeonGradientCard } from "../NeonGradientCard/neon-gradient-card";
+import { NeonGradientCardNoGlow } from "../NeonGradientCard/neon-gradient-card";
 import React from "react";
 
 const projects = [
@@ -51,7 +51,7 @@ export const ProjectSection = React.forwardRef<HTMLDivElement | null>(
         <h2 className="text-white text-3xl font-bold">Projects</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-white">
           {projects.map((project) => (
-            <NeonGradientCard key={project.title} borderSize={6}>
+            <NeonGradientCardNoGlow key={project.title} borderSize={6}>
               <Card className="flex flex-col gap-2 md:gap-4 rounded-xl bg-[#20242d]">
                 <CardHeader className="relative h-60">
                   <Image
@@ -88,7 +88,7 @@ export const ProjectSection = React.forwardRef<HTMLDivElement | null>(
                   )}
                 </CardFooter>
               </Card>
-            </NeonGradientCard>
+            </NeonGradientCardNoGlow>
           ))}
         </div>
       </section>
