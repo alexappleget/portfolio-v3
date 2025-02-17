@@ -46,7 +46,7 @@ export const ProjectSection = React.forwardRef<HTMLDivElement | null>(
       <section
         ref={ref}
         id="project-section"
-        className="flex flex-col gap-10 w-full py-6 md:py-20"
+        className="flex flex-col gap-10 w-full py-6 md:py-20 mt-20"
       >
         <h2 className="text-white text-3xl font-bold">Projects</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-20 md:gap-8 text-white">
