@@ -30,7 +30,7 @@ export const HeroSection = ({
           I build dynamic and efficient web applications using React, NextJS,
           TypeScript, and AI Models to create seamless user experiences.
         </p>
-        <div className="flex gap-4 mt-10 md:mt-0">
+        <div className="flex gap-4 mt-2 md:mt-0">
           <Link
             href="/01_Alex Appleget.pdf"
             target="_blank"
@@ -50,7 +50,7 @@ export const HeroSection = ({
           </button>
         </div>
       </div>
-      <div className="hidden w-full md:w-1/2 md:flex justify-center md:justify-end my-8 md:my-0">
+      <div className="hidden w-full md:w-1/2 md:flex justify-center md:justify-end">
         <NeonGradientCardGlow
           className="size-[250px] md:size-[375px] rounded-full flex items-center justify-center"
           borderSize={6}
