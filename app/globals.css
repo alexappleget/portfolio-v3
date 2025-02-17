@@ -17,6 +17,14 @@
     --color-5: 90 100% 63%;
   }
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -17,7 +17,7 @@ export const HeroSection = ({
   };
   return (
     <section className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-start px-6 md:px-20">
-      <div className="flex flex-col justify-center gap-6 md:gap-4 text-white w-full md:w-1/2 text-center md:text-left md:mt-0">
+      <div className="flex flex-col justify-center gap-6 md:gap-4 text-white w-full md:w-1/2 text-center md:text-left">
         <p className="text-3xl md:text-4xl">Hey! My name is</p>
         <h1 className="text-5xl md:text-7xl font-bold">Alex Appleget</h1>
         <h2 className="text-3xl md:text-4xl font-semibold">
