@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#20242d] px-6 md:px-20">
+      <body className="bg-[#20242d] px-6 md:px-20 py-8">
         {children}
         <Footer />
       </body>
